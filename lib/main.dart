@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:myportfolio/aboutMe.dart';
+import 'package:myportfolio/contact.dart';
 
 import 'welcome.dart';
 
@@ -11,14 +14,15 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'BK Portfolio',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
       initialRoute: "/",
       debugShowCheckedModeBanner: false,
       routes: {
-        '/': (context) => const WelcomeScreen(),
+        '/': (context) => AboutMe(),
+        '/contact': (context) => Contact(),
       },
     );
   }
